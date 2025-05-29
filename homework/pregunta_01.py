@@ -87,6 +87,13 @@ def pregunta_01():
             va="center",
             color=colors[col]
         )
+
+    plt.xticks(
+        ticks=df.index,
+        labels=df.index,
+        ha="center"
+    )
+
     plt.tight_layout()
     outdir = Path("files/plots")
     outdir.mkdir(parents=True, exist_ok=True)
